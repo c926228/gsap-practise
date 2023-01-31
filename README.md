@@ -18,7 +18,7 @@ pnpm add -D eslint @antfu/eslint-config
 ```
 
 ### 樣式＆動畫效果參考以下網站
-- [るるる温泉](https://ru-ru-ru.com/) : illimited slid
+- HotSpringWebsite - [るるる温泉](https://ru-ru-ru.com/) : illimited slid
 
 ## Recommended IDE Setup
 
@@ -52,12 +52,18 @@ npm run build
 npm run lint
 ```
 ## 規範
+- 參考[schaoss/vue3-new-project-tempalte](https://github.com/schaoss/vue3-new-project-tempalte)
 ### General
-- 檔案、路徑名稱使用 kebab-case
+- 專案、class、圖片、圖片路徑 名稱使用`kebab-case`
+- 路徑、JS變數 名稱使用`lowerCamelCase`
+- vue檔 名稱使用 `UpperCamelCase` 
+  - index.vue = 上層資料夾名稱.vue，單一頁面的路徑時使用UpperCamelCase
+- 常數 名稱使用`UPPER_SNAKE_CASE`
+- 單一頁面使用單獨路徑，相關components放在此路徑下
 
 ### Commit Message 
-#### 格式
-**type(scope): subject**
+#### 格式  
+**type(scope): subject**  
 `type`（必要）：commit 的類別  
 如：feat, fix, docs, style, refactor, test, chore  
 `scope`（可選）：commit 影響的範圍  
