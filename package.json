@@ -1,0 +1,32 @@
+{
+  "name": "vue3-practise",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@unocss/reset": "^0.48.0",
+    "gsap": "^3.11.4",
+    "pinia": "^2.0.28",
+    "sass": "^1.57.1",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.34.0",
+    "@iconify-json/ion": "^1.1.4",
+    "@unocss/transformer-directives": "^0.48.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "auto-import": "^0.1.4",
+    "eslint": "^8.30.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "unocss": "^0.48.0",
+    "unplugin-auto-import": "^0.12.1",
+    "vite": "^4.0.0"
+  }
+}
