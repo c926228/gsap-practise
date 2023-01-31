@@ -51,21 +51,25 @@ npm run build
 ```sh
 npm run lint
 ```
-## Commit Message 規範
-### 格式
+## 規範
+### General
+- 檔案、路徑名稱使用 kebab-case
+
+### Commit Message 
+#### 格式
 **type(scope): subject**
-`type`（必要）：commit 的類別
+`type`（必要）：commit 的類別  
 如：feat, fix, docs, style, refactor, test, chore
-`scope`（可選）：commit 影響的範圍
+`scope`（可選）：commit 影響的範圍  
 如：資料庫、控制層、模板層等，視專案不同改變
-`subject`（必要）：commit 的簡短描述，不超過 50 個字元，結尾不加句號，盡量讓 Commit 單一化，一次只更動一個主題
+`subject`（必要）：commit 的簡短描述，不超過 50 個字元，結尾不加句號，盡量讓 Commit 單一化，一次只更動一個主題  
 
 > 範例
 feat(優惠券): 加入搜尋按鈕，調整畫面
 
-### type 類別規範
-`Feat`: 新增/修改功能 (feature)。
-`Fix`: 修補 bug (bug fix)。
+#### type 類別規範
+`Feat`: 新增/修改功能 (feature)。  
+`Fix`: 修補 bug (bug fix)。  
 `Refactor`: 重構 (既不是新增功能，也不是修補 bug 的程式碼變動)。
 `Docs`: 文件 (documentation)。
 `Hotfix`: 修正正式環境bug
