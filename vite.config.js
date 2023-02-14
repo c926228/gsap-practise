@@ -30,6 +30,9 @@ export default defineConfig({
             'useMouse', // import { useMouse } from '@vueuse/core',
             // alias
             ['useFetch', 'useMyFetch'], // import { useFetch as useMyFetch } from '@vueuse/core',
+            ['useScroll', 'useWindowScroll'], // import { useWindowScroll, useScroll } from '@vueuse/core'
+            'useWindowSize', // import { useWindowSize } from '@vueuse/core'
+            'useElementSize', // import { useElementSize } from '@vueuse/core'
           ],
           'axios': [
             // default imports

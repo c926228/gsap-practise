@@ -99,9 +99,7 @@ onMounted(() => {
     <div class="left-area">
       <div class="title">
         <h6>Voice</h6>
-        <h3 mt>
-          お客様の声
-        </h3>
+        <h3>お客様の声</h3>
       </div>
     </div>
     <div class="right-area">
@@ -117,7 +115,7 @@ onMounted(() => {
               {{ item.status }}
             </p>
             <div class="content">
-              {{ item.content }}
+              <p>{{ item.content }}</p>
             </div>
           </div>
         </div>
@@ -143,11 +141,8 @@ onMounted(() => {
     }
     .title {
       @apply ml-10 flex flex-col items-center;
-      // h6 {
-      //   @apply c-white text-6;
-      // }
       h3 {
-        @apply write-vertical-left ;
+        @apply write-vertical-left mt;
       }
     }
 

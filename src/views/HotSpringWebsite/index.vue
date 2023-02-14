@@ -1,6 +1,10 @@
 <script setup>
 import Carousel from '@/views/HotSpringWebsite/components/Carousel.vue'
 import Sticky from '@/views/HotSpringWebsite/components/Sticky.vue'
+import Zoomin from '@/views/HotSpringWebsite/components/Zoomin.vue'
+// import About from '@/views/HotSpringWebsite/components/About.vue'
+import FlowingLogo from '@/views/HotSpringWebsite/components/FlowingLogo.vue'
+import FlowingIdol from '@/views/HotSpringWebsite/components/FlowingIdol.vue'
 import Slid from '@/views/HotSpringWebsite/components/Slid.vue'
 </script>
 
@@ -25,21 +29,36 @@ import Slid from '@/views/HotSpringWebsite/components/Slid.vue'
   <main>
     <Carousel w-screen h-screen />
     <Sticky w-screen />
+    <Zoomin w-screen />
+    <!-- <About w-screen /> -->
+    <FlowingLogo w-screen />
+    <FlowingIdol w-screen />
     <Slid w-screen h-screen />
   </main>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
   h3 {
     @apply font-black text-12;
+  }
+  h4 {
+    @apply font-black text-lg;
+  }
+  h5 {
+    @apply font-black text-xl ;
   }
   h6 {
     @apply c-white text-6 font-bold;
   }
-  a {
-    @apply cursor-pointer;
+  p {
+    @apply font-450 text-[14px] tracking-[-0.0125em];
   }
-
+  a {
+    @apply cursor-pointer leading-relaxed;
+  }
+  .border-decorate {
+    @apply border-8px border-black;
+  }
   .header {
     @apply flex justify-between items-center w-screen p-20px fixed top-0 z-20;
     .header-logo {
@@ -84,5 +103,4 @@ import Slid from '@/views/HotSpringWebsite/components/Slid.vue'
       @apply bg-left-top right-0;
     }
   }
-
 </style>

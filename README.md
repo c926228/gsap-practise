@@ -15,6 +15,7 @@ npm i @unocss/reset
 npm install @iconify-json/ion --save-dev   
 npm i -D unplugin-auto-import
 pnpm add -D eslint @antfu/eslint-config
+npm i @vueuse/core 
 ```
 
 ### 樣式＆動畫效果參考以下網站
