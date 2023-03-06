@@ -2,10 +2,11 @@
 import Carousel from '@/views/HotSpringWebsite/components/Carousel.vue'
 import Sticky from '@/views/HotSpringWebsite/components/Sticky.vue'
 import Zoomin from '@/views/HotSpringWebsite/components/Zoomin.vue'
-// import About from '@/views/HotSpringWebsite/components/About.vue'
+import About from '@/views/HotSpringWebsite/components/About.vue'
 import FlowingLogo from '@/views/HotSpringWebsite/components/FlowingLogo.vue'
 import FlowingIdol from '@/views/HotSpringWebsite/components/FlowingIdol.vue'
-import Slid from '@/views/HotSpringWebsite/components/Slid.vue'
+import CommentSlid from '@/views/HotSpringWebsite/components/CommentSlid.vue'
+import ProductSlid from '@/views/HotSpringWebsite/components/ProductSlid.vue'
 </script>
 
 <template>
@@ -27,13 +28,14 @@ import Slid from '@/views/HotSpringWebsite/components/Slid.vue'
     </nav>
   </header>
   <main>
-    <Carousel w-screen h-screen />
-    <Sticky w-screen />
-    <Zoomin w-screen />
+    <!-- <Carousel w-screen h-screen /> -->
+    <!-- <Sticky w-screen /> -->
+    <!-- <Zoomin w-screen /> -->
     <!-- <About w-screen /> -->
-    <FlowingLogo w-screen />
+    <!-- <FlowingLogo w-screen /> -->
     <FlowingIdol w-screen />
-    <Slid w-screen h-screen />
+    <!-- <ProductSlid w-screen h-screen /> -->
+    <CommentSlid w-screen h-screen />
   </main>
 </template>
 

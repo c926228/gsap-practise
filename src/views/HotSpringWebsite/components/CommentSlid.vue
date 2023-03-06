@@ -95,7 +95,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="slid-page">
+  <div class="comment-slid-page">
     <div class="left-area">
       <div class="title">
         <h6>Voice</h6>
@@ -130,7 +130,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.slid-page{
+.comment-slid-page{
   @apply pt-20 flex c-black truncate;
   .left-area{
     @apply relative w-20% h-100% py-80px;
@@ -174,7 +174,7 @@ onMounted(() => {
       }
     }
     .arrow-icon {
-      @apply absolute top-50% translate-y--50% w-46px h-46px  text-center bg-black rounded-full cursor-pointer flex items-center justify-center transition-all duration-300 ease-in-out;
+      @apply absolute top-[36%] w-46px h-46px  text-center bg-black rounded-full cursor-pointer flex items-center justify-center transition-all duration-300 ease-in-out;
       &:hover {
         @apply bg-#f72f8d ;
       }

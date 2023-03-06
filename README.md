@@ -7,16 +7,6 @@
 - [Iconify](https://iconify.design) - 使用任意的图标集，浏览：[🔍Icônes](https://icones.netlify.app/) ( IonIcons )
 - [UnoCSS](https://github.com/antfu/unocss) - 高性能且极具灵活性的即时原子化 CSS 引擎
 
-```sh
-npm i sass       
-npm install gsap  
-npm i -D unocss
-npm i @unocss/reset
-npm install @iconify-json/ion --save-dev   
-npm i -D unplugin-auto-import
-pnpm add -D eslint @antfu/eslint-config
-npm i @vueuse/core 
-```
 
 ### 樣式＆動畫效果參考以下網站
 - HotSpringWebsite - [るるる温泉](https://ru-ru-ru.com/) : illimited slid

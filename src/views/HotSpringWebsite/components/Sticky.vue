@@ -45,6 +45,7 @@ onMounted(() => {
       scrollTo: activeItem.offsetTop + (activeItem.offsetHeight / 2) - (window.innerHeight / 2),
     })
   }
+
   function handleScroll() {
     const scrollTop = document.documentElement.scrollTop // 目前滾超出螢幕上面的高度
     Array.from(contentList.value.children).map((item, index) => {
@@ -55,7 +56,7 @@ onMounted(() => {
         titleList.value.children[index].classList.add('is-active')
     })
   }
-  // window.addEventListener('scroll', handleScroll)
+  window.addEventListener('scroll', handleScroll)
 
   const arrow = CSSRulePlugin.getRule('.sticky-page main .left-area .title-list a::before')
 
