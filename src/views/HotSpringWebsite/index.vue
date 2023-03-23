@@ -1,12 +1,17 @@
 <script setup>
-import Carousel from '@/views/HotSpringWebsite/components/Carousel.vue'
+import CarouselIdol from '@/views/HotSpringWebsite/components/CarouselIdol.vue'
+import CarouselImg from '@/views/HotSpringWebsite/components/CarouselImg.vue'
 import Sticky from '@/views/HotSpringWebsite/components/Sticky.vue'
 import Zoomin from '@/views/HotSpringWebsite/components/Zoomin.vue'
-import About from '@/views/HotSpringWebsite/components/About.vue'
+import AboutHotSpring from '@/views/HotSpringWebsite/components/AboutHotSpring.vue'
+import AboutShop from '@/views/HotSpringWebsite/components/AboutShop.vue'
 import FlowingLogo from '@/views/HotSpringWebsite/components/FlowingLogo.vue'
 import FlowingIdol from '@/views/HotSpringWebsite/components/FlowingIdol.vue'
+import FlowingCoupon from '@/views/HotSpringWebsite/components/FlowingCoupon.vue'
 import CommentSlid from '@/views/HotSpringWebsite/components/CommentSlid.vue'
 import ProductSlid from '@/views/HotSpringWebsite/components/ProductSlid.vue'
+import Notice from '@/views/HotSpringWebsite/components/Notice.vue'
+import Footer from '@/views/HotSpringWebsite/components/Footer.vue'
 </script>
 
 <template>
@@ -28,14 +33,19 @@ import ProductSlid from '@/views/HotSpringWebsite/components/ProductSlid.vue'
     </nav>
   </header>
   <main>
-    <!-- <Carousel w-screen h-screen /> -->
+    <!-- <CarouselIdol w-screen h-screen /> -->
     <!-- <Sticky w-screen /> -->
     <!-- <Zoomin w-screen /> -->
-    <!-- <About w-screen /> -->
+    <!-- <AboutHotSpring w-screen /> -->
     <!-- <FlowingLogo w-screen /> -->
-    <FlowingIdol w-screen />
-    <!-- <ProductSlid w-screen h-screen /> -->
-    <CommentSlid w-screen h-screen />
+    <!-- <ProductSlid w-screen/> -->
+    <!-- <FlowingIdol w-screen /> -->
+    <!-- <CommentSlid w-screen /> -->
+    <!-- <CarouselImg w-screen /> -->
+    <!-- <AboutShop w-screen /> -->
+    <!-- <FlowingCoupon w-screen /> -->
+    <Notice w-screen />
+    <Footer w-screen />
   </main>
 </template>
 
@@ -57,6 +67,18 @@ import ProductSlid from '@/views/HotSpringWebsite/components/ProductSlid.vue'
   }
   a {
     @apply cursor-pointer leading-relaxed;
+  }
+  a.to-next {
+    @apply mt-[40px] inline-block leading-[60px] c-white bg-black p-l-[25px] p-r-[15px] rounded-full transition-all duration-300 ease-in-out;
+      span {
+        @apply relative ml-[17px] inline-block v-middle w-20px h-20px bg-white rounded-full;
+      }
+      &:hover {
+        @apply bg-#f72f8d;
+      }
+  }
+  ::before, ::after {
+    @apply pointer-events-none;
   }
   .border-decorate {
     @apply border-8px border-black;
@@ -95,8 +117,8 @@ import ProductSlid from '@/views/HotSpringWebsite/components/ProductSlid.vue'
   main {
     @apply bg-[url('src/assets/images/hot-spring-website/bg.jpg')];
     &::before, &::after{
-      @apply absolute bottom-[-150px] inline-block content-empty w-18% h-182px bg-repeat-inherit bg-[length:26px_auto]
-      bg-[url('src/assets/images/hot-spring-website/dot.svg')];
+      @apply absolute bottom-[-150px] inline-block content-empty w-18% h-182px bg-repeat-inherit bg-[length:26px_auto];
+      // bg-[url('src/assets/images/hot-spring-website/dot.svg')];
     }
     &::before{
       @apply bg-right-top left-0;

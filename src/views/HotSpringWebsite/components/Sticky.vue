@@ -61,11 +61,11 @@ onMounted(() => {
   const arrow = CSSRulePlugin.getRule('.sticky-page main .left-area .title-list a::before')
 
   bounceArrow
-    .to(arrow, { direction: 0.2, cssRule: { y: 0 } })
-    .to(arrow, { direction: 0.2, cssRule: { y: -20 } })
-    .to(arrow, { direction: 0.1, cssRule: { y: 10 } })
-    .to(arrow, { direction: 0.3, cssRule: { y: -5 } })
-    .to(arrow, { direction: 0.2, cssRule: { y: 0 } })
+    .to(arrow, { duration: 0.2, cssRule: { y: 0 } })
+    .to(arrow, { duration: 0.2, cssRule: { y: -20 } })
+    .to(arrow, { duration: 0.1, cssRule: { y: 10 } })
+    .to(arrow, { duration: 0.3, cssRule: { y: -5 } })
+    .to(arrow, { duration: 0.2, cssRule: { y: 0 } })
     .repeat(-1)
 })
 </script>

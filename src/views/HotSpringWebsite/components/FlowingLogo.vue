@@ -36,7 +36,7 @@ onMounted(() => {
 <template>
   <div class="flowing-logo-page">
     <div ref="flowingBox" class="flowing-box">
-      <div v-for="j in 2" :key="j" whitespace-nowrap inline-block style="border: 1px solid #000;">
+      <div v-for="j in 2" :key="j" whitespace-nowrap inline-block>
         <div v-for="i in logoRepeat" :key="i" class="flowing-logo-box">
           <img class="w-[15%]" pt-5 top-2 src="src/assets/images/hot-spring-website/logo-rororo1.svg">
           <img class="w-[15%]" pt-5 top-2 src="src/assets/images/hot-spring-website/logo-rororo1.svg">

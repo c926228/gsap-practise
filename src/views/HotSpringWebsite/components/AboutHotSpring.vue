@@ -2,7 +2,6 @@
 import { onMounted } from 'vue'
 import gsap from 'gsap'
 
-const zoominAnimation = gsap.timeline()
 
 onMounted(() => {
 
@@ -10,7 +9,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="about-page" scoped>
+  <div class="about-hotspring-page" scoped>
     <div class="title">
       <h6>About</h6>
       <h3>るるる温泉とは</h3>
@@ -23,7 +22,7 @@ onMounted(() => {
         <h4 class="mb-[0.25em]">塩原温泉について</h4>
         <p>塩原温泉は約150ヶ所以上の多種多様な源泉があり、泉質や効能で湯を選べることが特徴です。その中で塩原温泉郷と総称して呼ばれる11の温泉「塩原十一湯」があります。また、塩原温泉は日本にある10種類の泉質のうち6種類があり、かつ150以上の源泉が存在する国内屈指の一大温泉郷です。</p>
       </div>
-      <a href="">硫酸塩泉の効果・効能について<span i-ion-ios-arrow-dropright-circle/></a>
+      <a class="to-next" href="">硫酸塩泉の効果・効能について<span i-ion-ios-arrow-dropright-circle/></a>
     </div>
     <div class="about-idol border-decorate">
       <img src="src/assets/images/hot-spring-website/serow-whats-chara.svg" alt="">
@@ -34,7 +33,7 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-.about-page{
+.about-hotspring-page{
   @apply flex mt-[160px] px-[7.5%];
   .title {
     h3 {
@@ -48,15 +47,6 @@ onMounted(() => {
       &::before {
         @apply absolute left-0 top-0 w-22px h-100% content-empty inline-block bg-no-repeat bg-center
         bg-[url('src/assets/images/hot-spring-website/icon-onsen.svg')];
-      }
-    }
-    a {
-      @apply mt-[40px] inline-block leading-[60px] c-white bg-black p-l-[25px] p-r-[15px] rounded-full transition-all duration-300 ease-in-out;
-      span {
-        @apply relative ml-[17px] inline-block v-middle w-20px h-20px bg-white rounded-full;
-      }
-      &:hover {
-        @apply bg-#f72f8d;
       }
     }
   }

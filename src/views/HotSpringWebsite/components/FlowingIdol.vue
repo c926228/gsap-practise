@@ -1,7 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import gsap from 'gsap'
-const idolImgList = reactive([
+const idolImgList = [
   {
     idolImg: 'mv-chara-drink.svg',
     idolShadowImg: 'mv-shadow-drink.svg',
@@ -14,42 +14,20 @@ const idolImgList = reactive([
     idolImg: 'mv-chara-bath.svg',
     idolShadowImg: 'mv-shadow-bath.svg',
   },
-])
+]
 // Dom 渲染的清單 ＝ 實際清單*3
 const processList = computed(() => {
-  return idolImgList.concat(idolImgList, idolImgList)
+  return Array(3).fill().flatMap(() => idolImgList)
 })
 
-const flowingAnimation = gsap.timeline()
 const idolShadow = ref(null)
-
 const currentItem = ref(2)
 const movexPercent = ref(0)
 
-// 控制動畫
-function animationHandle() {
-  flowingAnimation
-    .set('.popup-idol', {
-      scale: 0.75,
-      y: '20%',
-      opacity: 0,
-    })
-
-  if (currentItem.value === 4 && movexPercent.value === 2) {
-    // console.log('初始化')
-    setToOriginal()
-  }
-  else {
-    // console.log('持續往左')
-    currentItem.value += 1
-    movexPercent.value += 1
-    anmation()
-  }
-}
 
 // 動畫
 function anmation() {
-  flowingAnimation
+  gsap.timeline()
     .to(idolShadow.value, {
       duration: 0.7,
       keyframes: [
@@ -81,12 +59,31 @@ function anmation() {
     }, '<0.2')
 }
 
-// 初始化 set無效
+// 控制動畫
+function animationHandle() {
+  gsap
+    .set('.popup-idol', {
+      scale: 0.75,
+      y: '20%',
+      opacity: 0,
+    })
+
+  if (currentItem.value === 4 && movexPercent.value === 2) {
+    setToOriginal()
+  }
+  else {
+    currentItem.value += 1
+    movexPercent.value += 1
+    anmation()
+  }
+}
+
+// 初始化 
 function setToOriginal() {
   currentItem.value = 2
   movexPercent.value = 0
 
-  flowingAnimation
+  gsap.timeline()
     .set(idolShadow.value, {
       xPercent: 0,
       yPercent: 0,
@@ -94,9 +91,7 @@ function setToOriginal() {
     .set(`.idolShadow-${currentItem.value}`, {
       opacity: 0,
     })
-    .to(`.idolShadow-${currentItem.value + 3}`, {
-      duration: 0,
-      ease: 'none',
+    .set(`.idolShadow-${currentItem.value + 3}`, {
       opacity: 1,
       onComplete: () => {
         anmation()
@@ -112,7 +107,6 @@ onMounted(() => {
   <div class="flowing-idol-page">
     <div class="flowing-box">
       <div v-for="(item, index) in processList" ref="idolShadow" :key="item" class="idolShadow" :class="[`idolShadow-${index}`]">
-        <span>{{ index }}</span>
         <img :src="`src/assets/images/hot-spring-website/${item.idolShadowImg}`">
       </div>
     </div>
@@ -125,7 +119,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .flowing-idol-page{
-  @apply mt-[175px] relative overflow-hidden;
+  @apply mt-[30px] relative overflow-hidden;
   .flowing-box{
     @apply whitespace-nowrap  inline-block;
     // border: 5px solid #f00;

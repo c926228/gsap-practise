@@ -3,7 +3,7 @@
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import gsap from 'gsap'
 
-const idolImgList = reactive([
+const idolImgList =[
   {
     titleImg: 'mv-copy-drink.svg',
     idolImg: 'mv-chara-drink.svg',
@@ -19,7 +19,7 @@ const idolImgList = reactive([
     idolImg: 'mv-chara-bath.svg',
     imgAlt: 'はいれる！',
   },
-])
+]
 const timeline = gsap.timeline()
 
 const currentIdolImg = ref(0)
@@ -92,7 +92,7 @@ function animation() {
       scale: 1,
     }, '>')
     .set(`.idol-img-list-${currentIdolImg.value}`, { // idol 復原
-      direction: 0,
+      duration: 0,
       filter: 'blur(0)',
       onComplete: () => {
         currentIdolImg.value = currentIdolImg.value === 2 ? 0 : currentIdolImg.value += 1

@@ -1,8 +1,8 @@
 <script setup>
-import { computed, onMounted, reactive, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import gsap from 'gsap'
 // 實際清單
-const voiceDataList = reactive([
+const commentDataList = [
   {
     pic1: 'voice-m40-50.png',
     pic2: 'voice-balloon-nomeru.svg',
@@ -40,57 +40,65 @@ const voiceDataList = reactive([
     status: '20代 / 女性',
     content: '粉を一口舐めてみると、わたあめみたいにほんのりと甘くて美味しかったです。粉は、口で中でサラッと溶けていきました。白湯に溶かして飲んでも美味しく飲むことができました。',
   },
-])
+]
 // Dom 渲染的清單 ＝ 實際清單*3
 const processList = computed(() => {
-  return voiceDataList.concat(voiceDataList, voiceDataList)
+  return Array(3).fill().flatMap(() => commentDataList)
 })
 
-const currentItem = ref(voiceDataList.length) // 當前項目
+const currentItem = ref(commentDataList.length) // 當前項目
 const previousItem = ref(0) // 前一個項目
 const moveX = computed(() => currentItem.value * -100)
 
 const progressbarX = computed(() => { // 進度條大小
-  return currentItem.value % voiceDataList.length >= 0 ? currentItem.value % voiceDataList.length + 1 : currentItem.value % voiceDataList.length + 7
+  return currentItem.value % commentDataList.length >= 0 ? currentItem.value % commentDataList.length + 1 : currentItem.value % commentDataList.length + 7
 }) // 進度條大小
 
 //* 切換當前項目
-function changeVoiceItem(btn) {
+function changeCommentItem(btn) {
   previousItem.value = currentItem.value
   currentItem.value += btn
 
-  moveVoiceListLis()
+  moveCommentListLis()
 }
+
+const listItem = ref(null)
 
 //* 清單 位移
-const timeline = gsap.timeline()
-function moveVoiceListLis() {
-  timeline.to('.progressbar', { direction: 1, scaleX: progressbarX.value, transformOrigin: '0%' })
-    .to(`.item${currentItem.value}`, { direction: 0.3, opacity: 1 }, '<')
-    .to(`.item${previousItem.value}`, { direction: 0.3, opacity: 0.5 }, '<')
-    .to('.list-item', { direction: 0.5, xPercent: moveX.value }, '<')
-
-  // 如果是第一輪最後一個||第三輪第一個 => 彈回第二輪的第一個||最後一個
-  if (currentItem.value === (voiceDataList.length - 1) || currentItem.value === (voiceDataList.length * 2))
-    backSecondList()
+function moveCommentListLis() {
+  gsap.timeline()
+    .to('.progressbar', { duration: 0.5, scaleX: progressbarX.value, transformOrigin: '0%' })
+    .to(`.item${currentItem.value}`, { duration: 0.3, opacity: 1 }, '<')
+    .to(`.item${previousItem.value}`, { duration: 0.3, opacity: 0.5 }, '<')
+    .to(listItem.value, {
+      duration: 0.5,
+      xPercent: moveX.value,
+      onComplete: () => {
+        // 如果是第一輪最後一個||第三輪第一個 => 彈回第二輪的第一個||最後一個
+        if (currentItem.value === (commentDataList.length - 1) || currentItem.value === (commentDataList.length * 2))
+          backSecondList()
+      },
+    }, '<')
 }
 
-// 回到第二輪的 第一個||最後一個
+// 初始化 回到第二輪的 第一個||最後一個
 function backSecondList() {
   // 計算 第二輪的第一個||最後一個
 
   previousItem.value = currentItem.value
-  currentItem.value = (currentItem.value % voiceDataList.length) + voiceDataList.length
+  currentItem.value = (currentItem.value % commentDataList.length) + commentDataList.length
 
   // 回第二輪的第一個||最後一個
-  timeline.set('.list-item', { direction: 0, xPercent: moveX.value })
-    .set(`.item${currentItem.value}`, { direction: 0, opacity: 1 }, '<')
-    .set(`.item${previousItem.value}`, { direction: 0, opacity: 0.5 }, '<')
+  gsap.timeline()
+    .set(listItem.value, { xPercent: moveX.value })
+    .set(`.item${currentItem.value}`, { opacity: 1 }, '<')
+    .set(`.item${previousItem.value}`, { opacity: 0.5 }, '<')
 }
 
 onMounted(() => {
-  timeline.set('.list-item', { direction: 0.5, xPercent: moveX.value })
-    .set(`.item${currentItem.value}`, { direction: 1, opacity: 1 }, '<')
+  gsap.timeline()
+    .set(listItem.value, { duration: 0.5, xPercent: moveX.value })
+    .set(`.item${currentItem.value}`, { duration: 1, opacity: 1 }, '<')
 })
 </script>
 
@@ -105,7 +113,7 @@ onMounted(() => {
     <div class="right-area">
       <div class="list-box">
         <div class="process-list">
-          <div v-for="(item, index) in processList" :key="item.name" class="list-item " :class="`item${index}`">
+          <div v-for="(item, index) in processList" :key="item.name" ref="listItem" class="list-items " :class="`item${index}`">
             <img class="pic1" :src="`src/assets/images/hot-spring-website/${item.pic1}`" alt="">
             <img class="pic2" :src="`src/assets/images/hot-spring-website/${item.pic2}`" alt="">
             <h6 m-t-20px>
@@ -120,10 +128,10 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <a class="arrow-icon" left--23px @click="changeVoiceItem(-1)"><div i-ion:chevron-back-outline c-white text-2xl /></a>
-      <a class="arrow-icon" left-357px @click="changeVoiceItem(1)"><div i-ion:chevron-forward c-white text-2xl /></a>
+      <a class="arrow-icon" left--23px @click="changeCommentItem(-1)"><div i-ion:chevron-back-outline c-white text-2xl /></a>
+      <a class="arrow-icon" left-357px @click="changeCommentItem(1)"><div i-ion:chevron-forward c-white text-2xl /></a>
       <div class="swiper-pagination">
-        <span :style="{ width: `${1 / voiceDataList.length * 100}%` }" class="progressbar" />
+        <span :style="{ width: `${1 / commentDataList.length * 100}%` }" class="progressbar" />
       </div>
     </div>
   </div>
@@ -157,7 +165,7 @@ onMounted(() => {
         &::before {
           @apply absolute left-0  top-0 w-380px h-100% border-8px border-black content-empty border-solid ;
         }
-        .list-item {
+        .list-items {
           @apply relative w-380px max-w-380px opacity-50 inline-block py-50px px-45px v-start ;
 
           .pic1{
@@ -174,7 +182,7 @@ onMounted(() => {
       }
     }
     .arrow-icon {
-      @apply absolute top-[36%] w-46px h-46px  text-center bg-black rounded-full cursor-pointer flex items-center justify-center transition-all duration-300 ease-in-out;
+      @apply absolute top-[50%] w-46px h-46px  text-center bg-black rounded-full cursor-pointer flex items-center justify-center transition-all duration-300 ease-in-out;
       &:hover {
         @apply bg-#f72f8d ;
       }
