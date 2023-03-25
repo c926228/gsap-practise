@@ -24,7 +24,6 @@ const idolShadow = ref(null)
 const currentItem = ref(2)
 const movexPercent = ref(0)
 
-
 // 動畫
 function anmation() {
   gsap.timeline()
@@ -78,7 +77,7 @@ function animationHandle() {
   }
 }
 
-// 初始化 
+// 初始化
 function setToOriginal() {
   currentItem.value = 2
   movexPercent.value = 0
@@ -107,12 +106,12 @@ onMounted(() => {
   <div class="flowing-idol-page">
     <div class="flowing-box">
       <div v-for="(item, index) in processList" ref="idolShadow" :key="item" class="idolShadow" :class="[`idolShadow-${index}`]">
-        <img :src="`src/assets/images/hot-spring-website/${item.idolShadowImg}`">
+        <img :src="`src/assets/images/${item.idolShadowImg}`">
       </div>
     </div>
 
     <div class="popup-idol">
-      <img :src="`src/assets/images/hot-spring-website/${processList[currentItem + 1].idolImg}`">
+      <img :src="`src/assets/images/${processList[currentItem + 1].idolImg}`">
     </div>
   </div>
 </template>

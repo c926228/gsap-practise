@@ -16,7 +16,7 @@ onMounted(() => {
     </div>
     <div class="main-box">
       <div class="left-box">
-        <img src="src/assets/images/hot-spring-website/logo-rururu.svg">
+        <img src="src/assets/images/logo-rururu.svg">
       </div>
       <div class="right-box">
         <div class="top-nav">
@@ -83,7 +83,7 @@ onMounted(() => {
       }
       .icon-blank {
         &::after {
-          @apply content-empty inline-block w-[8px] h-[8px] align-middle ml-[5px] bg-no-repeat bg-cover bg-center bg-[url('src/assets/images/hot-spring-website/icon-blank.png')];
+          @apply content-empty inline-block w-[8px] h-[8px] align-middle ml-[5px] bg-no-repeat bg-cover bg-center bg-[url('src/assets/images/icon-blank.png')];
         }
       }
     }
@@ -95,6 +95,6 @@ onMounted(() => {
       }
     }
   }
-  
+
 }
 </style>

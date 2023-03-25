@@ -38,11 +38,11 @@ onMounted(() => {
     <div ref="flowingBox" class="flowing-box">
       <div v-for="j in 2" :key="j" whitespace-nowrap inline-block>
         <div v-for="i in logoRepeat" :key="i" class="flowing-logo-box">
-          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/hot-spring-website/logo-rororo1.svg">
-          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/hot-spring-website/logo-rororo1.svg">
-          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/hot-spring-website/logo-rororo1.svg">
-          <img class="w-[25%]" mr-5 top-4 src="src/assets/images/hot-spring-website/logo-rororo2.svg">
-          <img class="w-[25%]" src="src/assets/images/hot-spring-website/logo-rororo3.svg">
+          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/logo-rororo1.svg">
+          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/logo-rororo1.svg">
+          <img class="w-[15%]" pt-5 top-2 src="src/assets/images/logo-rororo1.svg">
+          <img class="w-[25%]" mr-5 top-4 src="src/assets/images/logo-rororo2.svg">
+          <img class="w-[25%]" src="src/assets/images/logo-rororo3.svg">
         </div>
       </div>
     </div>

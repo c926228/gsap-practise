@@ -114,8 +114,8 @@ onMounted(() => {
       <div class="list-box">
         <div class="process-list">
           <div v-for="(item, index) in processList" :key="item.name" ref="listItem" class="list-items " :class="`item${index}`">
-            <img class="pic1" :src="`src/assets/images/hot-spring-website/${item.pic1}`" alt="">
-            <img class="pic2" :src="`src/assets/images/hot-spring-website/${item.pic2}`" alt="">
+            <img class="pic1" :src="`src/assets/images/${item.pic1}`" alt="">
+            <img class="pic2" :src="`src/assets/images/${item.pic2}`" alt="">
             <h6 m-t-20px>
               {{ item.name }}
             </h6>
@@ -145,7 +145,7 @@ onMounted(() => {
 
     &::before{
       @apply absolute w-90px h-330px inline-block left-0 content-empty bg-repeat-inherit bg-[length:30px]
-      bg-[url('src/assets/images/hot-spring-website/dot.svg')];
+      bg-[url('src/assets/images/dot.svg')];
     }
     .title {
       @apply ml-10 flex flex-col items-center;

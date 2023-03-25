@@ -24,7 +24,7 @@ onMounted(() => {
 
 <template>
   <div class="zoomin-page" scoped>
-    <img src="src/assets/images/hot-spring-website/curtain.svg" alt="" class="curtain">
+    <img src="src/assets/images/curtain.svg" alt="" class="curtain">
   </div>
 </template>
 

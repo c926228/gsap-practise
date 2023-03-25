@@ -36,11 +36,11 @@ onMounted(() => {
   <div class="carousel-img-page">
     <div ref="carouselImgBox" class="carousel-img-box">
       <div v-for="img in processList" :key="img" class="img-item">
-        <img :src="`src/assets/images/hot-spring-website/${img}`">
+        <img :src="`src/assets/images/${img}`">
       </div>
     </div>
     <div class="logo-decorate">
-      <img src="src/assets/images/hot-spring-website/gallery-logo.svg" alt="vertical-logo">
+      <img src="src/assets/images/gallery-logo.svg" alt="vertical-logo">
     </div>
   </div>
 </template>

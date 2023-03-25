@@ -31,8 +31,8 @@ onMounted(() => {
 
 <template>
   <div class="flowing-coupon-page">
-    <div class="coupon-img" >
-      <img src="src/assets/images/hot-spring-website/coupon-title.svg" alt="">
+    <div class="coupon-img">
+      <img src="src/assets/images/coupon-title.svg" alt="">
     </div>
     <div class="flowing-box">
       <div v-for="j in 2" :key="j" ref="flowingDot" class="flowing-dot" :class="flowingDotClass(j)">
@@ -40,7 +40,7 @@ onMounted(() => {
       </div>
       <a ref="flowingCoupon" class="flowing-coupon">
         <div v-for="i in 2" :key="i">
-          <img src="src/assets/images/hot-spring-website/coupon-buy.svg" alt="">
+          <img src="src/assets/images/coupon-buy.svg" alt="">
         </div>
       </a>
     </div>
@@ -61,7 +61,7 @@ onMounted(() => {
     .flowing-dot {
       @apply absolute left-0 inline-block whitespace-nowrap ;
       div {
-        @apply w-[2075px] h-[42px] inline-block bg-[url('src/assets/images/hot-spring-website/dot.svg')] bg-repeat-inherit bg-[length:21px_auto];
+        @apply w-[2075px] h-[42px] inline-block bg-[url('src/assets/images/dot.svg')] bg-repeat-inherit bg-[length:21px_auto];
       }
     }
     .top {

@@ -157,7 +157,7 @@ onMounted(() => {
           </div>
           <a>
             <figure>
-              <img :src="`src/assets/images/hot-spring-website/productImg/${item.img}`" alt="">
+              <img :src="`src/assets/images/productImg/${item.img}`" alt="">
             </figure>
             <h4>{{ index }} {{ item.name }}</h4>
             <p>{{ item.price }}<span text-xs ml-5px>円</span></p>
@@ -215,7 +215,7 @@ onMounted(() => {
         }
         &::before {
           @apply  absolute top-[-60px] left-[50%] translate-x-[-50%] z-5 block content-empty w-[80px] h-[100px] transition-all duration-300 ease-in-out
-          bg-[url('src/assets/images/hot-spring-website/series-steam.svg')];
+          bg-[url('src/assets/images/series-steam.svg')];
           clip-path: inset(100% 0 0 0);
         }
         &:hover {

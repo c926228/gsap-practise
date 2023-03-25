@@ -9,11 +9,6 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
-    {
-      path: '/HotSpringWebsite',
-      name: 'HotSpringWebsite',
-      component: () => import('../views/HotSpringWebsite/index.vue'),
-    },
   ],
 })
 
