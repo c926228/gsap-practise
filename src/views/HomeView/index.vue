@@ -34,9 +34,9 @@ import Footer from '@/components/Footer.vue'
   </header>
   <main>
     <CarouselIdol w-screen h-screen />
-    <Sticky w-screen />
+    <!-- <Sticky w-screen /> -->
     <!-- <Zoomin w-screen /> -->
-    <!-- <AboutHotSpring w-screen />
+    <AboutHotSpring w-screen />
     <FlowingLogo w-screen />
     <ProductSlid w-screen/>
     <FlowingIdol w-screen />
@@ -44,7 +44,7 @@ import Footer from '@/components/Footer.vue'
     <CarouselImg w-screen />
     <AboutShop w-screen />
     <FlowingCoupon w-screen />
-    <Notice w-screen /> -->
+    <Notice w-screen />
     <Footer w-screen />
   </main>
 </template>
