@@ -106,12 +106,12 @@ onMounted(() => {
   <div class="flowing-idol-page">
     <div class="flowing-box">
       <div v-for="(item, index) in processList" ref="idolShadow" :key="item" class="idolShadow" :class="[`idolShadow-${index}`]">
-        <img :src="`src/assets/images/${item.idolShadowImg}`">
+        <img :src="require(`../assets/images/${item.idolShadowImg}`)">
       </div>
     </div>
 
     <div class="popup-idol">
-      <img :src="`src/assets/images/${processList[currentItem + 1].idolImg}`">
+      <img :src="require(`../assets/images/${processList[currentItem + 1].idolImg}`)">
     </div>
   </div>
 </template>

@@ -111,10 +111,10 @@ onMounted(() => {
     <div class="idolshadow-carousel-box">
       <div v-for="(item, index) in idolshadowImgList" :key="item" class="idolshadow-img-list" :class="[`idolshadow-img-list-${index}`]">
         <div class="left-img">
-          <img :src="`src/assets/images/${item}`" alt="">
+          <img :src="require(`../assets/images/${item}`)" alt="">
         </div>
         <div class="right-img">
-          <img :src="`src/assets/images/${idolshadowImgList[index === 2 ? 0 : index + 1]}`" alt="">
+          <img :src="require(`../assets/images/${idolshadowImgList[index === 2 ? 0 : index + 1]}`)" alt="">
         </div>
       </div>
     </div>
@@ -150,7 +150,7 @@ onMounted(() => {
           </div>
           <div class="img-item">
             <div class="title">
-              <div><img :src="`src/assets/images/${item.titleImg}`" :alt="item.imgAlt" opacity-0></div>
+              <div><img :src="require(`../assets/images/${item.titleImg}`)" :alt="item.imgAlt" opacity-0></div>
               <div absolute top="-20%" left="-10%" w="50%">
                 <img src="../assets/images/mv-copy-nasu.svg" alt="那須塩原の" opacity-0>
               </div>
@@ -159,7 +159,7 @@ onMounted(() => {
               </div>
             </div>
             <div class="idol-img">
-              <img :src="`src/assets/images/${item.idolImg}`" alt="">
+              <img :src="require(`../assets/images/${item.idolImg}`)" alt="">
             </div>
           </div>
         </div>

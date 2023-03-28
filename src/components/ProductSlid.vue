@@ -157,7 +157,7 @@ onMounted(() => {
           </div>
           <a>
             <figure>
-              <img :src="`src/assets/images/productImg/${item.img}`" alt="">
+              <img :src="require(`../assets/images/productImg/${item.img}`)" alt="">
             </figure>
             <h4>{{ index }} {{ item.name }}</h4>
             <p>{{ item.price }}<span text-xs ml-5px>円</span></p>

@@ -79,7 +79,7 @@ onMounted(() => {
           <h3>るるる温泉の楽しみ方</h3>
           <div ref="titleList" class="title-list">
             <a v-for="(item, index) in introductionList" :key="item" :class="[{ 'is-active': index === activeBtn }, `title-btn-${index}`]" @click="isActive(index)">
-              <img :src="`src/assets/images/${item.idolImg}`" alt="">
+              <img :src="require(`../assets/images/${item.idolImg}`)" alt="">
               <h6>{{ item.title }}</h6>
               <p>{{ item.span }}</p>
             </a>
@@ -88,8 +88,8 @@ onMounted(() => {
       </div>
       <div ref="contentList" class="right-area">
         <div v-for="(item, index) in introductionList" :id="`content${index}`" :key="item" class="content-list border-decorate" :class="[`content-list-${index}`]">
-          <img class="idol-img" :src="`src/assets/images/${item.idolImg}`" alt="">
-          <img class="balloon-img" :src="`src/assets/images/${item.balloonImg}`" alt="">
+          <img class="idol-img" :src="require(`../assets/images/${item.idolImg}`)" alt="">
+          <img class="balloon-img" :src="require(`../assets/images/${item.balloonImg}`)" alt="">
           <p>{{ item.content }}</p>
         </div>
       </div>

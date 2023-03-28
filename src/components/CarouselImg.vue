@@ -36,7 +36,7 @@ onMounted(() => {
   <div class="carousel-img-page">
     <div ref="carouselImgBox" class="carousel-img-box">
       <div v-for="img in processList" :key="img" class="img-item">
-        <img :src="`src/assets/images/${img}`">
+        <img :src="require(`../assets/images/${img}`)">
       </div>
     </div>
     <div class="logo-decorate">
