@@ -34,7 +34,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .notice-page{
-  @apply flex justify-between mt-[145px] px-[7.5%] ;
+  @apply flex justify-between mt-[145px] pb-[160px] px-[7.5%] ;
   .title {
     @apply flex-[0_0_30%];
   }

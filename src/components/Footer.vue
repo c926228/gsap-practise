@@ -16,7 +16,7 @@ onMounted(() => {
     </div>
     <div class="main-box">
       <div class="left-box">
-        <img src="src/assets/images/logo-rururu.svg">
+        <img src="../assets/images/logo-rururu.svg">
       </div>
       <div class="right-box">
         <div class="top-nav">
@@ -37,7 +37,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .footer-page{
-  @apply mt-[160px] p-[140px_80px_120px] c-white bg-black;
+  @apply p-[140px_80px_120px] c-white bg-black;
   a {
       &:hover {
         @apply c-#f72f8d;

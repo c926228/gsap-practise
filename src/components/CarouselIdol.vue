@@ -123,21 +123,21 @@ onMounted(() => {
       <div class="logo-box">
         <div px-15>
           <div class="logo-name">
-            <img src="src/assets/images/logo-rororo1.svg">
+            <img src="../assets/images/logo-rororo1.svg">
           </div>
           <div class="logo-name">
-            <img src="src/assets/images/logo-rororo1.svg">
+            <img src="../assets/images/logo-rororo1.svg">
           </div>
           <div class="logo-name">
-            <img src="src/assets/images/logo-rororo1.svg">
+            <img src="../assets/images/logo-rororo1.svg">
           </div>
         </div>
         <div pl-5>
           <div class="logo-name" mr-7>
-            <img src="src/assets/images/logo-rororo2.svg">
+            <img src="../assets/images/logo-rororo2.svg">
           </div>
           <div class="logo-name">
-            <img src="src/assets/images/logo-rororo3.svg">
+            <img src="../assets/images/logo-rororo3.svg">
           </div>
         </div>
       </div>
@@ -145,17 +145,17 @@ onMounted(() => {
       <div class="idol-carousel-box">
         <div v-for="(item, index) in idolImgList" :key="item.idolImg" class="idol-img-list" :class="[`idol-img-list-${index}`]">
           <div class="fog">
-            <img src="src/assets/images/yuge.png" alt="">
-            <img src="src/assets/images/yuge.png" alt="">
+            <img src="../assets/images/yuge.png" alt="">
+            <img src="../assets/images/yuge.png" alt="">
           </div>
           <div class="img-item">
             <div class="title">
               <div><img :src="`src/assets/images/${item.titleImg}`" :alt="item.imgAlt" opacity-0></div>
               <div absolute top="-20%" left="-10%" w="50%">
-                <img src="src/assets/images/mv-copy-nasu.svg" alt="那須塩原の" opacity-0>
+                <img src="../assets/images/mv-copy-nasu.svg" alt="那須塩原の" opacity-0>
               </div>
               <div absolute bottom="-35%" right-0 w="25%">
-                <img src="src/assets/images/mv-copy-onsen.svg" alt="温泉" opacity-0>
+                <img src="../assets/images/mv-copy-onsen.svg" alt="温泉" opacity-0>
               </div>
             </div>
             <div class="idol-img">

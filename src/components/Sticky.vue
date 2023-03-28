@@ -94,7 +94,7 @@ onMounted(() => {
         </div>
       </div>
     </main>
-    <img src="src/assets/images/serow-enjoy.svg" alt="" class="introduction-icon">
+    <img src="../assets/images/serow-enjoy.svg" alt="" class="introduction-icon">
   </div>
 </template>
 

@@ -40,7 +40,7 @@ onMounted(() => {
       </div>
     </div>
     <div class="logo-decorate">
-      <img src="src/assets/images/gallery-logo.svg" alt="vertical-logo">
+      <img src="../assets/images/gallery-logo.svg" alt="vertical-logo">
     </div>
   </div>
 </template>

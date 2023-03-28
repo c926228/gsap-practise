@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <div class="flowing-coupon-page">
     <div class="coupon-img">
-      <img src="src/assets/images/coupon-title.svg" alt="">
+      <img src="../assets/images/coupon-title.svg" alt="">
     </div>
     <div class="flowing-box">
       <div v-for="j in 2" :key="j" ref="flowingDot" class="flowing-dot" :class="flowingDotClass(j)">
@@ -40,7 +40,7 @@ onMounted(() => {
       </div>
       <a ref="flowingCoupon" class="flowing-coupon">
         <div v-for="i in 2" :key="i">
-          <img src="src/assets/images/coupon-buy.svg" alt="">
+          <img src="../assets/images/coupon-buy.svg" alt="">
         </div>
       </a>
     </div>

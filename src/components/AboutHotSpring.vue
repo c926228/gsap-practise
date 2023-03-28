@@ -26,7 +26,7 @@ onMounted(() => {
       <a class="to-next" href="">硫酸塩泉の効果・効能について<span i-ion-ios-arrow-dropright-circle /></a>
     </div>
     <div class="about-idol border-decorate">
-      <img src="src/assets/images/serow-whats-chara.svg" alt="">
+      <img src="../assets/images/serow-whats-chara.svg" alt="">
       <h5>カモシカ番頭について</h5>
       <p>湯守田中屋の駐車場にちょこちょこ顔を出しているうちに、いつしか田中屋の番頭に抜擢された。明るく気さくだが、少し恥ずかしがり屋、好きな食べ物は生ゆば（とってもグルメ）</p>
     </div>
