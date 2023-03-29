@@ -47,7 +47,7 @@ onMounted(() => {
       @apply relative pl-[30px];
       &::before {
         @apply absolute left-0 top-0 w-22px h-100% content-empty inline-block bg-no-repeat bg-center
-        bg-[url('src/assets/images/icon-onsen.svg')];
+        bg-[url('/icon-onsen.svg')];
       }
     }
   }

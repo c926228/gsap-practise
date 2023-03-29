@@ -13,6 +13,8 @@ import CommentSlid from '@/components/CommentSlid.vue'
 import ProductSlid from '@/components/ProductSlid.vue'
 import Notice from '@/components/Notice.vue'
 import Footer from '@/components/Footer.vue'
+
+import bgImg from '@/assets/images/bg.jpg'
 </script>
 
 <template>
@@ -69,10 +71,10 @@ import Footer from '@/components/Footer.vue'
     @apply border-8px border-black;
   }
   main {
-    @apply bg-[url('src/assets/images/bg.jpg')];
+    @apply bg-[url('/bg.jpg')];
     &::before, &::after{
       @apply absolute bottom-[-150px] inline-block content-empty w-18% h-182px bg-repeat-inherit bg-[length:26px_auto];
-      // bg-[url('src/assets/images/dot.svg')];
+      // bg-[url('/dot.svg')];
     }
     &::before{
       @apply bg-right-top left-0;

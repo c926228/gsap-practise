@@ -61,7 +61,9 @@ onMounted(() => {
     .flowing-dot {
       @apply absolute left-0 inline-block whitespace-nowrap ;
       div {
-        @apply w-[2075px] h-[42px] inline-block bg-[url('src/assets/images/dot.svg')] bg-repeat-inherit bg-[length:21px_auto];
+        @apply w-[2075px] h-[42px] inline-block
+        bg-[url('/dot.svg')]
+        bg-repeat-inherit bg-[length:21px_auto];
       }
     }
     .top {
