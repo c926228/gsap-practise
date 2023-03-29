@@ -14,7 +14,6 @@ import ProductSlid from '@/components/ProductSlid.vue'
 import Notice from '@/components/Notice.vue'
 import Footer from '@/components/Footer.vue'
 
-import bgImg from '@/assets/images/bg.jpg'
 </script>
 
 <template>
@@ -70,6 +69,7 @@ import bgImg from '@/assets/images/bg.jpg'
   .border-decorate {
     @apply border-8px border-black;
   }
+
   main {
     @apply bg-[url('/bg.jpg')];
     &::before, &::after{
