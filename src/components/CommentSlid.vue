@@ -95,6 +95,10 @@ function backSecondList() {
     .set(`.item${previousItem.value}`, { opacity: 0.5 }, '<')
 }
 
+function getImageUrl(name) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href
+}
+
 onMounted(() => {
   gsap.timeline()
     .set(listItem.value, { duration: 0.5, xPercent: moveX.value })
@@ -114,8 +118,8 @@ onMounted(() => {
       <div class="list-box">
         <div class="process-list">
           <div v-for="(item, index) in processList" :key="item.name" ref="listItem" class="list-items " :class="`item${index}`">
-            <img class="pic1" :src="require(`../assets/images/${item.pic1}`)" alt="">
-            <img class="pic2" :src="require(`../assets/images/${item.pic2}`)" alt="">
+            <img class="pic1" :src="getImageUrl(item.pic1)" alt="">
+            <img class="pic2" :src="getImageUrl(item.pic2)" alt="">
             <h6 m-t-20px>
               {{ item.name }}
             </h6>

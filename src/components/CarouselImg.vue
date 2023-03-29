@@ -17,6 +17,10 @@ const processList = computed(() => {
 
 const carouselImgBox = ref(null)
 
+function getImageUrl(name) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href
+}
+
 function carouselAnimation() {
   gsap.timeline()
     .to(carouselImgBox.value, {
@@ -36,7 +40,7 @@ onMounted(() => {
   <div class="carousel-img-page">
     <div ref="carouselImgBox" class="carousel-img-box">
       <div v-for="img in processList" :key="img" class="img-item">
-        <img :src="require(`../assets/images/${img}`)">
+        <img :src="getImageUrl(img)">
       </div>
     </div>
     <div class="logo-decorate">

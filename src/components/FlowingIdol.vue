@@ -97,6 +97,11 @@ function setToOriginal() {
       },
     })
 }
+
+function getImageUrl(name) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href
+}
+
 onMounted(() => {
   anmation()
 })
@@ -106,12 +111,12 @@ onMounted(() => {
   <div class="flowing-idol-page">
     <div class="flowing-box">
       <div v-for="(item, index) in processList" ref="idolShadow" :key="item" class="idolShadow" :class="[`idolShadow-${index}`]">
-        <img :src="require(`../assets/images/${item.idolShadowImg}`)">
+        <img :src="getImageUrl(item.idolShadowImg)">
       </div>
     </div>
 
     <div class="popup-idol">
-      <img :src="require(`../assets/images/${processList[currentItem + 1].idolImg}`)">
+      <img :src="getImageUrl(processList[currentItem + 1].idolImg)">
     </div>
   </div>
 </template>

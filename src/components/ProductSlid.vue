@@ -133,6 +133,10 @@ function isActive(index) {
   return index === (currentItem.value % productList.length) ? 'active' : null
 }
 
+function getImageUrl(name) {
+  return new URL(`../assets/images/${name}`, import.meta.url).href
+}
+
 onMounted(() => {
   cardBgAnimation()
   moveProductListLis()
@@ -157,7 +161,7 @@ onMounted(() => {
           </div>
           <a>
             <figure>
-              <img :src="require(`../assets/images/productImg/${item.img}`)" alt="">
+              <img :src="getImageUrl(item.img)" alt="">
             </figure>
             <h4>{{ index }} {{ item.name }}</h4>
             <p>{{ item.price }}<span text-xs ml-5px>円</span></p>
