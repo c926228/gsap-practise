@@ -71,10 +71,10 @@ import Footer from '@/components/Footer.vue'
   }
 
   main {
-    @apply bg-[url('bg.jpg')];
+    @apply bg-[url('/gsap-practise/bg.jpg')];
     &::before, &::after{
       @apply absolute bottom-[-150px] inline-block content-empty w-18% h-182px bg-repeat-inherit bg-[length:26px_auto];
-      // bg-[url('/dot.svg')];
+      bg-[url('/gsap-practise/dot.svg')];
     }
     &::before{
       @apply bg-right-top left-0;

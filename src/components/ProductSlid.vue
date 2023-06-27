@@ -219,7 +219,7 @@ onMounted(() => {
         }
         &::before {
           @apply  absolute top-[-60px] left-[50%] translate-x-[-50%] z-5 block content-empty w-[80px] h-[100px] transition-all duration-300 ease-in-out
-          bg-[url('/series-steam.svg')];
+          bg-[url('/gsap-practise/series-steam.svg')];
           clip-path: inset(100% 0 0 0);
         }
         &:hover {

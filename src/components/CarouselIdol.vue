@@ -184,7 +184,7 @@ onMounted(() => {
           @apply relative opacity-[0];
           &::before {
             @apply absolute top-[-10%] inline-block content-empty w-30% h-100px bg-no-repeat bg-[length:100%_auto]
-            bg-[url('/mv-balloon.svg')];
+            bg-[url('/gsap-practise/mv-balloon.svg')];
           }
         }
         .left-img {

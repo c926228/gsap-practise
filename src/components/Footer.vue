@@ -84,7 +84,7 @@ onMounted(() => {
       .icon-blank {
         &::after {
           @apply content-empty inline-block w-[8px] h-[8px] align-middle ml-[5px] bg-no-repeat bg-cover bg-center
-          bg-[url('/icon-blank.png')];
+          bg-[url('/gsap-practise/icon-blank.png')];
         }
       }
     }

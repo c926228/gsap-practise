@@ -149,7 +149,7 @@ onMounted(() => {
 
     &::before{
       @apply absolute w-90px h-330px inline-block left-0 content-empty bg-repeat-inherit bg-[length:30px]
-      bg-[url('/dot.svg')];
+      bg-[url('/gsap-practise/dot.svg')];
     }
     .title {
       @apply ml-10 flex flex-col items-center;
